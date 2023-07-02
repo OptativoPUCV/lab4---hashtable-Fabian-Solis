@@ -61,9 +61,20 @@ void enlarge(HashMap * map) {
 }
 
 
-HashMap * createMap(long capacity) {
+HashMap * createMap(long capacity) 
+{
+   long indice = hash(key, map -> capacity);
 
-    return NULL;
+  while (map -> buckets[indice] != NULL && map -> buckets[indice] -> key != NULL)
+  {
+    if (is_equal(key, map -> buckets[indice] -> key))
+    {
+      map -> current = indice;
+      return map -> buckets[indice];
+    }
+    indice = (indice + 1) % map -> capacity;
+  }
+
 }
 
 void eraseMap(HashMap * map,  char * key) {    

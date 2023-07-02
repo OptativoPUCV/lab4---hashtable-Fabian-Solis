@@ -22,3 +22,22 @@ Sun 02 Jul 2023 03:33:33 AM UTC:
  tests:  4|5
 total_score: 20/70
 f920798
+Sun 02 Jul 2023 03:33:58 AM UTC: 
+ hashmap.c | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:66:23: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   66 |    long indice = hash(key, map -> capacity);
+      |                       ^~~
+      |                       key_t
+hashmap.c:66:23: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:66:28: error: ‘map’ undeclared (first use in this function)
+   66 |    long indice = hash(key, map -> capacity);
+      |                            ^~~
+hashmap.c:78:1: error: control reaches end of non-void function [-Werror=return-type]
+   78 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3147778
