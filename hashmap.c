@@ -63,17 +63,14 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) 
 {
-   long indice = hash(key, map -> capacity);
+  HashMap *mapa = malloc(sizeof(HashMap));
+  
+  Pair **buckets = calloc(capacity, sizeof(HashMap));
 
-  while (map -> buckets[indice] != NULL && map -> buckets[indice] -> key != NULL)
-  {
-    if (is_equal(key, map -> buckets[indice] -> key))
-    {
-      map -> current = indice;
-      return map -> buckets[indice];
-    }
-    indice = (indice + 1) % map -> capacity;
-  }
+  mapa -> buckets = buckets;
+  mapa -> size = 0;
+ 
+  
 
 }
 
