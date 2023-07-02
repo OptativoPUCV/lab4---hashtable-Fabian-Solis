@@ -75,3 +75,9 @@ Sun 02 Jul 2023 03:36:41 AM UTC:
  tests:  5|4
 total_score: 30/70
 aa1dc89
+Sun 02 Jul 2023 03:37:26 AM UTC: 
+ hashmap.c | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+ tests:  6|3
+total_score: 40/70
+233a9a4
