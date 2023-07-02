@@ -73,7 +73,7 @@ void enlarge(HashMap * map)
       insertMap(map, pair->key, pair->value);
     }
   }
-  
+  free(old_buckets);
 }
 
 
