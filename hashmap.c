@@ -100,7 +100,7 @@ void eraseMap(HashMap * map,  char * key)
     if (is_equal(key, map -> buckets[indice] -> key))
     {
       map -> current = indice;
-    
+      map -> size--;
       map -> buckets[indice] -> key = NULL;
       return;
     }
