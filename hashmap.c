@@ -100,7 +100,7 @@ void eraseMap(HashMap * map,  char * key)
     if (is_equal(key, map -> buckets[indice] -> key))
     {
       map -> current = indice;
-      map -> size--;
+    
       map -> buckets[indice] -> key = NULL;
       return;
     }
@@ -108,18 +108,21 @@ void eraseMap(HashMap * map,  char * key)
   }
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
+Pair * searchMap(HashMap * map,  char * key) 
+{   
 
 
-    return NULL;
+  return NULL;
 }
 
-Pair * firstMap(HashMap * map) {
+Pair * firstMap(HashMap * map) 
+{
 
-    return NULL;
+  return NULL;
 }
 
-Pair * nextMap(HashMap * map) {
+Pair * nextMap(HashMap * map) 
+{
 
-    return NULL;
+  return NULL;
 }
