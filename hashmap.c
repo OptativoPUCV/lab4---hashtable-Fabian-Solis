@@ -110,8 +110,17 @@ void eraseMap(HashMap * map,  char * key)
 
 Pair * searchMap(HashMap * map,  char * key) 
 {   
+  long indice = hash(key, map -> capacity);
 
-
+  while (map -> buckets[indice] != NULL && map -> buckets[indice] -> key != NULL)
+  {
+    if (is_equal(key, map -> buckets[indice] -> key))
+    {
+      map -> current = indice;
+      return map -> buckets[indice];
+    }
+    indice = (indice + 1) % map -> capacity;
+  }
   return NULL;
 }
 
